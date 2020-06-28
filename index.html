@@ -8,6 +8,8 @@
   <!-- CSS -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/slick-theme.css">
   <!-- FONTS -->
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@400;500&display=swap"
@@ -99,8 +101,36 @@
           dolor sit ametconsectetur adipisicing elit sed do eiusmod tempor
           incididunt ut labore et dolore magna aliqua ut enimad mid veniam
           quis nostrud exercitation ullamco laboris nisid.</p>
+        <div class="skill">
+          <div class="skill__item">
+            <div class="skill-text">
+              <p class="skill-text__title">Web-design</p>
+              <p class="skill-text__percent">85%</p>
+            </div>
+            <div class="skill-progress">
+              <div class="skill-progress__item skill-progress__item--web"></div>
+            </div>
+          </div>
+          <div class="skill__item">
+            <div class="skill-text">
+              <p class="skill-text__title">Programming</p>
+              <p class="skill-text__percent">65%</p>
+            </div>
+            <div class="skill-progress">
+              <div class="skill-progress__item skill-progress__item--programming"></div>
+            </div>
+          </div>
+          <div class="skill__item">
+            <div class="skill-text">
+              <p class="skill-text__title">Marketing</p>
+              <p class="skill-text__percent">75%</p>
+            </div>
+            <div class="skill-progress">
+              <div class="skill-progress__item skill-progress__item--marketing"></div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
     </div>
   </section>
   <section class="section portfolio">
@@ -227,11 +257,49 @@
     </div>
   </section>
   <section class="section teams">
-    <div class="teams__wrap">
+    <div class="teams__item teams__item--background">
       <div class="container">
         <div class="main-text">
           <p class="main-text__title">Our Teams</p>
           <p class="main-text__desc">Lorem ipsum dolor amet consectetur adipisic elit</p>
+        </div>
+      </div>
+    </div>
+    <div class="teams__list">
+      <div class="teams__list__item">
+        <div class="teams__list__item_image">
+          <img src="img/section/person-3.png" />
+        </div>
+        <div class="teams__list__item_info">
+          <div class="teams__list__item_name">Sara Konnor</div>
+          <div class="teams__list__item_desc">Creative Director</div>
+        </div>
+      </div>
+      <div class="teams__list__item">
+        <div class="teams__list__item_image">
+          <img src="img/section/person-2.png" />
+        </div>
+        <div class="teams__list__item_info">
+          <div class="teams__list__item_name">Sara Konnor</div>
+          <div class="teams__list__item_desc">Creative Director</div>
+        </div>
+      </div>
+      <div class="teams__list__item">
+        <div class="teams__list__item_image">
+          <img src="img/section/person-3.png" />
+        </div>
+        <div class="teams__list__item_info">
+        <div class="teams__list__item_name">Sara Konnor</div>
+        <div class="teams__list__item_desc">Creative Director</div>
+      </div>
+      </div>
+      <div class="teams__list__item">
+        <div class="teams__list__item_image">
+          <img src="img/section/person-2.png" />
+        </div>
+        <div class="teams__list__item_info">
+          <div class="teams__list__item_name">Sara Konnor</div>
+          <div class="teams__list__item_desc">Creative Director</div>
         </div>
       </div>
     </div>
@@ -325,8 +393,57 @@
     </div>
   </section>
   <footer class="footer section">
-    
+    <div class="container">
+      <div class="footer-wrapper">
+        <div class="footer__header">
+          <div class="footer-block footer-block--social">
+            <img src="img/icon/logo-footer.svg" alt="" class="footer-block__logo">
+            <div class="social">
+              <a href="#" class="social__item inst"></a>
+              <a href="#" class="social__item fb"></a>
+              <a href="#" class="social__item tw"></a>
+            </div>
+          </div>
+          <div class="footer-block">
+            <p class="footer-block__title">Sitemap</p>
+            <div class="footer-block__line"></div>
+            <nav class="footer__nav">
+              <ul class="footer-nav__list">
+                <li class="footer-nav__item"><a href="#" class="footer-nav__link">About Us</a></li>
+                <li class="footer-nav__item"><a href="#" class="footer-nav__link">Portfolio</a></li>
+                <li class="footer-nav__item"><a href="#" class="footer-nav__link">Services</a></li>
+                <li class="footer-nav__item"><a href="#" class="footer-nav__link">Teams</a></li>
+                <li class="footer-nav__item"><a href="#" class="footer-nav__link">Testimonals</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="footer-block">
+            <p class="footer-block__title">Contact Info</p>
+            <div class="footer-block__line"></div>
+            <p class="footer-block__desc">68 Landsriver Street,</p>
+            <p class="footer-block__desc">California USA 22036</p>
+            <p class="footer-block__desc">0800 126 01268</p>
+            <p class="footer-block__desc">support@oscend.com</p>
+          </div>
+          <div class="footer-block footer-block--newsletter">
+            <p class="footer-block__title">Newsletter</p>
+            <div class="footer-block__line"></div>
+            <p class="footer-block__desc">Register to receive news</p>
+            <div class="footer__input">
+              <input type="email" class="footer-block__input" placeholder="Email adress...">
+              <div class="footer__input__icon"></div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <p class="footer__bottom__text">&copy; Copyright 2020 <a href="#"">Creative Agency</a> - All Rights reserved</p>
+        </div>
+      </div>
+    </div>
   </footer>
+  <script src=" https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+              <script src="js/slick.min.js"></script>
+              <script src="js/main.js"></script>
 </body>
 
 </html>

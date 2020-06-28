@@ -61,6 +61,11 @@ header::before {
 .menu__link {
   color: #FFFDFD;
   text-decoration: none;
+  font-weight: 500;
+  font-size: 20px;
+}
+.menu__link--active {
+  color: #FF6F14;
 }
 .header-wrap {
   width: 100%;
@@ -195,13 +200,25 @@ header::before {
 }
 .info {
   background: #FBFBFF;
-  border: 5px solid #000000;
   box-sizing: border-box;
-  /* backdrop: blur(10px); */
   border-radius: 37px;
   width: 540px;
   padding: 64px 24px 90px 24px;
+  box-shadow: 0 0 14px #000 inset;
 }
+/* .info::before {
+  content: '';
+  display: block;
+  width: 545px;
+  height: 100%;
+  border-radius: 37px;
+  background: #FBFBFF;
+  filter: blur(10px);
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  top: 0;
+} */
 .info__menu {
   display: flex;
 }
@@ -237,6 +254,43 @@ header::before {
   margin-bottom: 24px;
 }
 /* info block*/
+.skill-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.skill-text__title {
+  font-size: 22px;
+  line-height: 26px;
+  color: #000000;
+}
+.skill-text__percent {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+}
+.skill-progress {
+  width: 100%;
+  height: 4px;
+  background-color: #D9DBE3;
+  margin-top: 10px;
+  margin-bottom: 18px;
+}
+.skill-progress__item {
+  height: 4px;
+  background-color: #FF6F14;
+}
+.skill-progress__item--web {
+  width: 85%;
+}
+.skill-progress__item--programming {
+  width: 65%;
+}
+.skill-progress__item--marketing {
+  width: 75%;
+}
+
 
 .menu-buttons {
   display: flex;
@@ -274,6 +328,7 @@ header::before {
 }
 .job {
   display: flex;
+  justify-content: center;
   align-items: center;
   margin-top: 75px;
 }
@@ -435,20 +490,26 @@ header::before {
   color: #47484A;
 }
 .teams {
-  padding: 0;
-  overflow: hidden;
+  font-family: 'Roboto Condensed', sans-serif;
+  flex-flow: row wrap;
+  /* overflow: hidden; */
+  background: #FFFDFD;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-bottom: 290px;
+  position: relative;
 }
-.teams__wrap {
+.teams__item--background {
   padding-top: 85px;
   padding-bottom: 347px;
   background: #191511;
-  position: relative;
   background-image: url('../img/section/computer-1.png'),
                     url('../img/section/computer-2.png'),
                     url('../img/section/computer-3.png');
   background-repeat: no-repeat;
-  background-position: 25px 228px, 90% 32px, 80% 233px;
-  /* overflow: hidden; */
+  background-position: -30px 120px, 90% 32px, 80% 233px;
+  z-index: -1; 
+  overflow: hidden; 
 }
 .teams .main-text__title {
   color: #fff;
@@ -456,6 +517,68 @@ header::before {
 .teams .main-text__desc {
   color: #D9DBE3;
 }
+.teams .teams__list {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  z-index: 1;
+  /* top: -40px; */
+  /* bottom: 60px; */
+  left: 0;
+  top: 350px;
+  overflow: hidden;
+}
+.teams__list__item {
+  position: relative;
+  outline: none;
+  overflow: hidden;
+}
+.teams__list__item_info {
+  display: none;
+  /* position: absolute; */
+  width: 96%;
+  margin: 0 auto;
+  transform: translateY(-100%);
+  margin-top: -13px;
+  background: rgba(255, 111, 20, 0.95);
+  box-shadow: 0 0 10px 10px rgba(255, 111, 20, 0.95);
+  border-radius: 10px;
+  text-align: center;
+  padding: 25px 0;
+}
+.teams__list__item:hover .teams__list__item_info{
+  display: block;
+}
+.teams__list__item_name {
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 42px;
+  color: #141313;
+  letter-spacing: 0.05em;
+}
+.teams__list__item_desc {
+  font-size: 24px;
+  letter-spacing: 0.05em;
+  line-height: 28px;
+  color: #ffff;
+}
+.slick-next,
+.slick-prev {
+  width: 70px;
+  height: 100%;
+  z-index: 9999999;
+  opacity: 0;
+}
+.teams__list__item_image img {
+  width: 100%;
+  padding-right: 8%;
+}
+
+.slick-slide {
+  margin: 0 1.25%;
+  transform: translateX(-85%);
+}
+
 .testimonials {
   background: #F5EFEF;
   font-family: 'Roboto Condensed', sans-serif;
@@ -554,6 +677,7 @@ header::before {
   background-attachment: fixed;
   position: relative;
   z-index: 1;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 .footer::before {
   content: '';
@@ -566,4 +690,108 @@ header::before {
   background: rgba(20, 19, 19, 0.9);
   background-attachment: fixed;
   z-index: -1;
+}
+.footer__header {
+  display: flex;
+  justify-content: space-between;
+}
+.footer-block--social {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer-block__logo {
+  width: 77px;
+  height: 77px;
+  margin-bottom: 48px;
+}
+.social__item {
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+.inst {
+  background-image: url('../img/icon/inst.svg');
+}
+.fb {
+  background-image: url('../img/icon/fb.svg');
+  margin: 33px 0;
+}
+.tw {
+  background-image: url('../img/icon/tw.svg');
+}
+.footer-block__title {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 35px;
+  letter-spacing: 0.05em;
+  color: #FFFBFB;
+}
+.footer-block__line {
+  width: 65px;
+  height: 6px;
+  background: #FF6F14;
+  margin: 23px 0;
+}
+.footer-nav__link {
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 0.05em;
+  color: #A5A9B8;
+  text-decoration: none;
+}
+.footer-nav__item, .footer-block__desc {
+  margin-bottom: 16px;
+}
+.footer-nav__item:last-child, .footer-block__desc:last-child {
+  margin-bottom: 0;
+}
+.footer-block__desc {
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 0.05em;
+  color: #A5A9B8;
+}
+.footer-block--newsletter {
+  width: 255px;
+}
+.footer__input {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 13px;
+  border-bottom: 3px solid #A5A9B8;
+}
+.footer__input__icon {
+  width: 29px;
+  height: 29px;
+  background-image: url('../img/icon/mail.svg');
+}
+.footer-block__input {
+  background: transparent;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 0.05em;
+  color: #A5A9B8;
+  width: 210px;
+}
+.footer-block__input::placeholder {
+  color: #A5A9B8;
+}
+.footer__bottom {
+  width: 100%;
+  border-top: 2px solid #47484A;
+  margin-top: 53px;
+  text-align: center;
+}
+.footer__bottom__text {
+  font-size: 14px;
+  line-height: 16px;
+  color: #A5A9B8;
+  margin-top: 16px;
+}
+.footer__bottom__text a {
+  font-weight: 500;
+  color: #FFFBFB;
+  text-decoration: none;
 }
