@@ -24,4 +24,47 @@ $(document).ready(function () {
       }
     ]
   });
+  // Скролл
+  $('a[href=\"#about-link\"]').click(function () {
+    var scroll_el = $(this).attr('href');
+    if ($(scroll_el).length != 0) {
+      $('html, body').animate({ scrollTop: $(scroll_el).offset().top }, 500);
+    }
+    return false;
+  });
+  $('a[href=\"#portfolio-link\"]').click(function () {
+    var scroll_el = $(this).attr('href');
+    if ($(scroll_el).length != 0) {
+      $('html, body').animate({ scrollTop: $(scroll_el).offset().top }, 500);
+    }
+    return false;
+  });
+  $('a[href=\"#services-link\"]').click(function () {
+    var scroll_el = $(this).attr('href');
+    if ($(scroll_el).length != 0) {
+      $('html, body').animate({ scrollTop: $(scroll_el).offset().top }, 500);
+    }
+    return false;
+  });
+  $('a[href=\"#teams-link\"]').click(function () {
+    var scroll_el = $(this).attr('href');
+    if ($(scroll_el).length != 0) {
+      $('html, body').animate({ scrollTop: $(scroll_el).offset().top }, 500);
+    }
+    return false;
+  });
+  $('a[href=\"#reviews-link\"]').click(function () {
+    var scroll_el = $(this).attr('href');
+    if ($(scroll_el).length != 0) {
+      $('html, body').animate({ scrollTop: $(scroll_el).offset().top }, 500);
+    }
+    return false;
+  });
+  $('a[href=\"#contact-link\"]').click(function () {
+    var scroll_el = $(this).attr('href');
+    if ($(scroll_el).length != 0) {
+      $('html, body').animate({ scrollTop: $(scroll_el).offset().top }, 500);
+    }
+    return false;
+  });
 });
