@@ -8,8 +8,10 @@
   <!-- CSS -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/media.css">
   <link rel="stylesheet" href="css/slick.css">
   <link rel="stylesheet" href="css/slick-theme.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
   <!-- FONTS -->
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@400;500&display=swap"
@@ -18,20 +20,32 @@
 
 <body>
   <header class="header">
-    <div class="container">
-      <div class="menu">
-        <div class="menu-logo"></div>
-        <nav class="menu__nav">
-          <ul class="menu__list">
-            <li class="menu__item"><a href="#about-link" class="menu__link menu__link--active">About us</a></li>
-            <li class="menu__item"><a href="#portfolio-link" class="menu__link">Portfolio</a></li>
-            <li class="menu__item"><a href="#services-link" class="menu__link">Services</a></li>
-            <li class="menu__item"><a href="#teams-link" class="menu__link">Teams</a></li>
-            <li class="menu__item"><a href="#reviews-link" class="menu__link">Testimonials</a></li>
-            <li class="menu__item"><a href="#contact-link" class="menu__link">Contact</a></li>
-          </ul>
-        </nav>
+    <div class="menu-wrapper">
+      <div class="container container-menu">
+        <div class="menu">
+          <div class="menu-logo"></div>
+          <nav class="menu__nav">
+            <ul class="menu__list">
+              <li class="menu__item"><a href="#about-link" class="menu__link menu__link--active">About us</a></li>
+              <li class="menu__item"><a href="#portfolio-link" class="menu__link">Portfolio</a></li>
+              <li class="menu__item"><a href="#services-link" class="menu__link">Services</a></li>
+              <li class="menu__item"><a href="#teams-link" class="menu__link">Teams</a></li>
+              <li class="menu__item"><a href="#reviews-link" class="menu__link">Testimonials</a></li>
+              <li class="menu__item"><a href="#contact-link" class="menu__link">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+        <!-- burger menu -->
+        <div class="menu-mobile">
+          <div class="burger">
+            <span class="burger__line"></span>
+          </div>
+          <div class="menu-logo menu-logo--mobile"></div>
+          <button class="button-search"></button>
+        </div>
       </div>
+    </div>
+    <div class="container">
       <div class="header-wrap">
         <div class="company">
           <p class="company__subtitle">We Are Creative</p>
@@ -84,49 +98,51 @@
   </section>
   <section class="section about" id="about-link">
     <div class="container">
-      <div class="info">
-        <div class="info__menu">
-          <div class="info-menu-item info-menu-item--active">
-            <p class="info-menu-item__title">About Us</p>
-          </div>
-          <div class="info-menu-item">
-            <p class="info-menu-item__title">Our Mission</p>
-          </div>
-          <div class="info-menu-item">
-            <p class="info-menu-item__title">Why Us?</p>
-          </div>
-        </div>
-        <p class="info__desc">Amco laboris nisi ut aliquip xea commodo consequt.Duis aute irure
-          dolor reprehenderit voluptate velit esse cillum dolore fugiat lore ipsum<br>
-          dolor sit ametconsectetur adipisicing elit sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua ut enimad mid veniam
-          quis nostrud exercitation ullamco laboris nisid.</p>
-        <div class="skill">
-          <div class="skill__item">
-            <div class="skill-text">
-              <p class="skill-text__title">Web-design</p>
-              <p class="skill-text__percent">85%</p>
+      <div class="info-wrapper">
+        <div class="info">
+          <div class="info__menu">
+            <div class="info-menu-item info-menu-item--active">
+              <p class="info-menu-item__title">About Us</p>
             </div>
-            <div class="skill-progress">
-              <div class="skill-progress__item skill-progress__item--web"></div>
+            <div class="info-menu-item">
+              <p class="info-menu-item__title">Our Mission</p>
+            </div>
+            <div class="info-menu-item">
+              <p class="info-menu-item__title">Why Us?</p>
             </div>
           </div>
-          <div class="skill__item">
-            <div class="skill-text">
-              <p class="skill-text__title">Programming</p>
-              <p class="skill-text__percent">65%</p>
+          <p class="info__desc">Amco laboris nisi ut aliquip xea commodo consequt.Duis aute irure
+            dolor reprehenderit voluptate velit esse cillum dolore fugiat lore ipsum<br>
+            dolor sit ametconsectetur adipisicing elit sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua ut enimad mid veniam
+            quis nostrud exercitation ullamco laboris nisid.</p>
+          <div class="skill">
+            <div class="skill__item">
+              <div class="skill-text">
+                <p class="skill-text__title">Web-design</p>
+                <p class="skill-text__percent">85%</p>
+              </div>
+              <div class="skill-progress">
+                <div class="skill-progress__item skill-progress__item--web"></div>
+              </div>
             </div>
-            <div class="skill-progress">
-              <div class="skill-progress__item skill-progress__item--programming"></div>
+            <div class="skill__item">
+              <div class="skill-text">
+                <p class="skill-text__title">Programming</p>
+                <p class="skill-text__percent">65%</p>
+              </div>
+              <div class="skill-progress">
+                <div class="skill-progress__item skill-progress__item--programming"></div>
+              </div>
             </div>
-          </div>
-          <div class="skill__item">
-            <div class="skill-text">
-              <p class="skill-text__title">Marketing</p>
-              <p class="skill-text__percent">75%</p>
-            </div>
-            <div class="skill-progress">
-              <div class="skill-progress__item skill-progress__item--marketing"></div>
+            <div class="skill__item">
+              <div class="skill-text">
+                <p class="skill-text__title">Marketing</p>
+                <p class="skill-text__percent">75%</p>
+              </div>
+              <div class="skill-progress">
+                <div class="skill-progress__item skill-progress__item--marketing"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -289,9 +305,9 @@
           <img src="img/section/person-3.png" />
         </div>
         <div class="teams__list__item_info">
-        <div class="teams__list__item_name">Sara Konnor</div>
-        <div class="teams__list__item_desc">Creative Director</div>
-      </div>
+          <div class="teams__list__item_name">Sara Konnor</div>
+          <div class="teams__list__item_desc">Creative Director</div>
+        </div>
       </div>
       <div class="teams__list__item">
         <div class="teams__list__item_image">
@@ -311,84 +327,236 @@
         <p class="main-text__desc">We`re full service which means we`ve got you covered on
           design and content right trougt to digital</p>
       </div>
-      <div class="reviews">
-        <div class="reviews-blocks">
-          <div class="review">
-            <div class="review-author">
-              <div class="review-author__avatar">
-                <!-- <img src="img/section/person-2.png" alt=""> -->
+      <div class="reviews swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="reviews-blocks">
+              <div class="review">
+                <div class="review-author">
+                  <div class="review-author__avatar">
+                    <!-- <img src="img/section/person-2.png" alt=""> -->
+                  </div>
+                  <div class="review-author__text">
+                    <p class="review-author__text__title">Alex Smith</p>
+                    <p class="review-author__text__subtitle">Customer</p>
+                  </div>
+                </div>
+                <p class="review__desc">
+                  Lorem ipsum dolor sit amet consect letur se adipisicing elit sed don eiusmod.
+                </p>
               </div>
-              <div class="review-author__text">
-                <p class="review-author__text__title">Alex Smith</p>
-                <p class="review-author__text__subtitle">Customer</p>
+    
+              <div class="review-border">
+                <div class="review-border__line"></div>
+                <div class="quotes">
+                  <div class="quotes__item quotes__item--margin-right">
+                    <img src="img/icon/quotes.svg" alt="">
+                  </div>
+                  <div class="quotes__item">
+                    <img src="img/icon/quotes.svg" alt="">
+                  </div>
+                </div>
               </div>
+    
+              <div class="review">
+                <div class="review-author">
+                  <div class="review-author__avatar">
+                    <!-- <img src="img/section/person-2.png" alt=""> -->
+                  </div>
+                  <div class="review-author__text">
+                    <p class="review-author__text__title">Alex Smith</p>
+                    <p class="review-author__text__subtitle">Customer</p>
+                  </div>
+                </div>
+                <p class="review__desc">
+                  Lorem ipsum dolor sit amet consect letur se adipisicing elit sed don eiusmod.
+                </p>
+              </div>
+    
+              <div class="review-border">
+                <div class="review-border__line"></div>
+                <div class="quotes">
+                  <div class="quotes__item quotes__item--margin-right">
+                    <img src="img/icon/quotes.svg" alt="">
+                  </div>
+                  <div class="quotes__item">
+                    <img src="img/icon/quotes.svg" alt="">
+                  </div>
+                </div>
+              </div>
+    
+    
+              <div class="review">
+                <div class="review-author">
+                  <div class="review-author__avatar">
+                    <!-- <img src="img/section/person-2.png" alt=""> -->
+                  </div>
+                  <div class="review-author__text">
+                    <p class="review-author__text__title">Alex Smith</p>
+                    <p class="review-author__text__subtitle">Customer</p>
+                  </div>
+                </div>
+                <p class="review__desc">
+                  Lorem ipsum dolor sit amet consect letur se adipisicing elit sed don eiusmod.
+                </p>
+              </div>
+    
             </div>
-            <p class="review__desc">
-              Lorem ipsum dolor sit amet consect letur se adipisicing elit sed don eiusmod.
-            </p>
           </div>
-
-          <div class="review-border">
-            <div class="review-border__line"></div>
-            <div class="quotes">
-              <div class="quotes__item quotes__item--margin-right">
-                <img src="img/icon/quotes.svg" alt="">
+          <div class="swiper-slide">
+            <div class="reviews-blocks">
+              <div class="review">
+                <div class="review-author">
+                  <div class="review-author__avatar">
+                    <!-- <img src="img/section/person-2.png" alt=""> -->
+                  </div>
+                  <div class="review-author__text">
+                    <p class="review-author__text__title">Alex Smith</p>
+                    <p class="review-author__text__subtitle">Customer</p>
+                  </div>
+                </div>
+                <p class="review__desc">
+                  Lorem ipsum dolor sit amet consect letur se adipisicing elit sed don eiusmod.
+                </p>
               </div>
-              <div class="quotes__item">
-                <img src="img/icon/quotes.svg" alt="">
+    
+              <div class="review-border">
+                <div class="review-border__line"></div>
+                <div class="quotes">
+                  <div class="quotes__item quotes__item--margin-right">
+                    <img src="img/icon/quotes.svg" alt="">
+                  </div>
+                  <div class="quotes__item">
+                    <img src="img/icon/quotes.svg" alt="">
+                  </div>
+                </div>
               </div>
+    
+              <div class="review">
+                <div class="review-author">
+                  <div class="review-author__avatar">
+                    <!-- <img src="img/section/person-2.png" alt=""> -->
+                  </div>
+                  <div class="review-author__text">
+                    <p class="review-author__text__title">Alex Smith</p>
+                    <p class="review-author__text__subtitle">Customer</p>
+                  </div>
+                </div>
+                <p class="review__desc">
+                  Lorem ipsum dolor sit amet consect letur se adipisicing elit sed don eiusmod.
+                </p>
+              </div>
+    
+              <div class="review-border">
+                <div class="review-border__line"></div>
+                <div class="quotes">
+                  <div class="quotes__item quotes__item--margin-right">
+                    <img src="img/icon/quotes.svg" alt="">
+                  </div>
+                  <div class="quotes__item">
+                    <img src="img/icon/quotes.svg" alt="">
+                  </div>
+                </div>
+              </div>
+    
+    
+              <div class="review">
+                <div class="review-author">
+                  <div class="review-author__avatar">
+                    <!-- <img src="img/section/person-2.png" alt=""> -->
+                  </div>
+                  <div class="review-author__text">
+                    <p class="review-author__text__title">Alex Smith</p>
+                    <p class="review-author__text__subtitle">Customer</p>
+                  </div>
+                </div>
+                <p class="review__desc">
+                  Lorem ipsum dolor sit amet consect letur se adipisicing elit sed don eiusmod.
+                </p>
+              </div>
+    
             </div>
           </div>
-
-          <div class="review">
-            <div class="review-author">
-              <div class="review-author__avatar">
-                <!-- <img src="img/section/person-2.png" alt=""> -->
+          <div class="swiper-slide">
+            <div class="reviews-blocks">
+              <div class="review">
+                <div class="review-author">
+                  <div class="review-author__avatar">
+                    <!-- <img src="img/section/person-2.png" alt=""> -->
+                  </div>
+                  <div class="review-author__text">
+                    <p class="review-author__text__title">Alex Smith</p>
+                    <p class="review-author__text__subtitle">Customer</p>
+                  </div>
+                </div>
+                <p class="review__desc">
+                  Lorem ipsum dolor sit amet consect letur se adipisicing elit sed don eiusmod.
+                </p>
               </div>
-              <div class="review-author__text">
-                <p class="review-author__text__title">Alex Smith</p>
-                <p class="review-author__text__subtitle">Customer</p>
+    
+              <div class="review-border">
+                <div class="review-border__line"></div>
+                <div class="quotes">
+                  <div class="quotes__item quotes__item--margin-right">
+                    <img src="img/icon/quotes.svg" alt="">
+                  </div>
+                  <div class="quotes__item">
+                    <img src="img/icon/quotes.svg" alt="">
+                  </div>
+                </div>
               </div>
+    
+              <div class="review">
+                <div class="review-author">
+                  <div class="review-author__avatar">
+                    <!-- <img src="img/section/person-2.png" alt=""> -->
+                  </div>
+                  <div class="review-author__text">
+                    <p class="review-author__text__title">Alex Smith</p>
+                    <p class="review-author__text__subtitle">Customer</p>
+                  </div>
+                </div>
+                <p class="review__desc">
+                  Lorem ipsum dolor sit amet consect letur se adipisicing elit sed don eiusmod.
+                </p>
+              </div>
+    
+              <div class="review-border">
+                <div class="review-border__line"></div>
+                <div class="quotes">
+                  <div class="quotes__item quotes__item--margin-right">
+                    <img src="img/icon/quotes.svg" alt="">
+                  </div>
+                  <div class="quotes__item">
+                    <img src="img/icon/quotes.svg" alt="">
+                  </div>
+                </div>
+              </div>
+    
+    
+              <div class="review">
+                <div class="review-author">
+                  <div class="review-author__avatar">
+                    <!-- <img src="img/section/person-2.png" alt=""> -->
+                  </div>
+                  <div class="review-author__text">
+                    <p class="review-author__text__title">Alex Smith</p>
+                    <p class="review-author__text__subtitle">Customer</p>
+                  </div>
+                </div>
+                <p class="review__desc">
+                  Lorem ipsum dolor sit amet consect letur se adipisicing elit sed don eiusmod.
+                </p>
+              </div>
+    
             </div>
-            <p class="review__desc">
-              Lorem ipsum dolor sit amet consect letur se adipisicing elit sed don eiusmod.
-            </p>
           </div>
-
-          <div class="review-border">
-            <div class="review-border__line"></div>
-            <div class="quotes">
-              <div class="quotes__item quotes__item--margin-right">
-                <img src="img/icon/quotes.svg" alt="">
-              </div>
-              <div class="quotes__item">
-                <img src="img/icon/quotes.svg" alt="">
-              </div>
-            </div>
-          </div>
-
-
-          <div class="review">
-            <div class="review-author">
-              <div class="review-author__avatar">
-                <!-- <img src="img/section/person-2.png" alt=""> -->
-              </div>
-              <div class="review-author__text">
-                <p class="review-author__text__title">Alex Smith</p>
-                <p class="review-author__text__subtitle">Customer</p>
-              </div>
-            </div>
-            <p class="review__desc">
-              Lorem ipsum dolor sit amet consect letur se adipisicing elit sed don eiusmod.
-            </p>
-          </div>
-
         </div>
-        <div class="reviews__dots">
-          <span class="reviews__dots__item reviews__dots__item--active"></span>
-          <span class="reviews__dots__item"></span>
-          <span class="reviews__dots__item"></span>
-        </div>
+      </div>
+      <div class="reviews__dots">
+        <span class="reviews__dots__item reviews__dots__item--active"></span>
+        <span class="reviews__dots__item"></span>
+        <span class="reviews__dots__item"></span>
       </div>
     </div>
   </section>
@@ -442,8 +610,9 @@
     </div>
   </footer>
   <script src=" https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-              <script src="js/slick.min.js"></script>
-              <script src="js/main.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>

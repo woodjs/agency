@@ -1,0 +1,71 @@
+@media (max-width: 1200px) {
+  .menu {
+    padding: 0 30px;
+  }
+}
+@media (max-width: 1000px) {
+  .menu-wrapper {
+    background: #47484A;
+    padding: 7px 0;
+  }
+  .menu-mobile {
+    display: flex;
+  }
+  .menu {
+    display: none;
+  }
+  .card {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card-item {
+    margin-bottom: 50px;
+  }
+  .card-item:last-child {
+    margin-bottom: 0;
+  }
+  .info-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .job__center {
+    margin: 0;
+  }
+  .job__center__item--margin {
+    margin: 0;
+  }
+  .job__side__item--margin-bottom {
+    margin: 0;
+  }
+  .counter {
+    padding: 0 45px;
+  }
+  .flex.service {
+    flex-direction: column;
+    align-items: center;
+  }
+  .service-block {
+    margin-bottom: 50px;
+  }
+  .service-block:last-child {
+    margin-bottom: 0;
+  }
+  .reviews-blocks {
+    /* padding: 0 30px; */
+  }
+  .footer__header {
+    padding: 0 30px;
+  }
+  .testimonials .main-text, .services .main-text {
+    padding: 0 30px;
+  }
+}
+/* @media (max-width: 950px) {
+  .reviews-blocks {
+    justify-content:
+  }
+  .review-wrapper {
+    display: none;
+  }
+} */

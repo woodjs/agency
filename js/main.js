@@ -24,6 +24,14 @@ $(document).ready(function () {
       }
     ]
   });
+  // $('.reviews').slick();
+   var mySwiper = new Swiper ('.swiper-container', {
+     loop: true,
+     autoplay: {
+      delay: 3000
+     },
+     speed: 400
+   });
   // Скролл
   $('a[href=\"#about-link\"]').click(function () {
     var scroll_el = $(this).attr('href');
@@ -67,4 +75,5 @@ $(document).ready(function () {
     }
     return false;
   });
+  // добавляю класс к меню при скролле
 });

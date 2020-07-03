@@ -19,7 +19,7 @@ header {
   background-attachment: fixed;
   position: relative;
   z-index: 1;
-  padding-top: 32px;
+  /* padding-top: 32px; */
   /* padding-bottom: 171px; */
   padding-bottom: 120px;
   box-sizing: border-box;
@@ -36,10 +36,16 @@ header::before {
   background-attachment: fixed;
   z-index: -1;
 }
+.menu-wrapper {
+  padding-top: 32px;
+}
 .menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.container-fixed {
+  position: fixed;
 }
 .menu-logo {
   width: 45px;
@@ -67,6 +73,50 @@ header::before {
 .menu__link--active {
   color: #FF6F14;
 }
+/* MOBILE MENU */
+.menu-mobile {
+  width: 100%;
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  display: none;
+}
+.burger {
+  width: 33px;
+}
+.burger__line {
+  position: relative;
+}
+.burger__line, .burger__line::before, .burger__line::after {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: #FF6F14;
+  border-radius: 4px;
+}
+.burger__line::before, .burger__line::after {
+  content: '';
+  position: absolute;
+}
+.burger__line::before {
+  bottom: 7px;
+}
+.burger__line::after {
+  top: 7px;
+}
+.menu-logo--mobile {
+  width: 35px;
+  height: 35px;
+}
+.button-search {
+  width: 24px;
+  height: 24px;
+  background-image: url('../img/icon/search.svg');
+  background-color: transparent;
+}
+/* END MOBILE MENU */
 .header-wrap {
   width: 100%;
   display: flex;
@@ -354,6 +404,13 @@ header::before {
 .job__side__item {
   height: 512px;
 }
+.job__side__item img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
 .job__center__item {
   height: 350px;
 }
@@ -586,10 +643,19 @@ header::before {
 .reviews {
   margin-top: 40px;
 }
+.reviews-slider {
+  width: 100%;
+  
+}
 .reviews-blocks {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+}
+.review-wrapper {
+  display: flex;
+  align-items: center;
 }
 .review-author {
   display: flex;
